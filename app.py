@@ -7,3 +7,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__) # Flask alkalmazás létrehozása
 
+@app.route("/")
+def home():
+    return render_template("calculator.html")
