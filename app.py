@@ -3,12 +3,7 @@
 #flask run vagy python app.py
 #localhost: 127.0.0.1:5000/
 
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template, request
 
-@app.route("/")
-def home():
-    return "Helló, működik a Flask!"
+app = Flask(__name__) # Flask alkalmazás létrehozása
 
-if __name__ == "__main__":
-    app.run(debug=True)
